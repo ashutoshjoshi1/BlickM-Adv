@@ -268,7 +268,7 @@ if l2_data:
             on_bad_lines="skip"
         )
 
-        # Ensure datetime conversion
+        
         timestamp_column = df_l2.columns[0]
         df_l2[timestamp_column] = pd.to_datetime(df_l2[timestamp_column], format="%Y%m%dT%H%M%S.%fZ", errors="coerce")
         df_l2.dropna(subset=[timestamp_column], inplace=True)
