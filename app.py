@@ -264,8 +264,9 @@ if l2_data:
     if data_section:
         df_l2 = pd.read_csv(
             io.StringIO(data_section),
-            sep=r'\s+', 
-            on_bad_lines="skip"
+            sep=r'\s+',
+            on_bad_lines="skip",
+            nrows=500  # ✅ Limit to 500 rows to prevent memory issues
         )
 
         
