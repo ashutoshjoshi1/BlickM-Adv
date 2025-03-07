@@ -264,7 +264,7 @@ if l2_data:
     if data_section:
         df_l2 = pd.read_csv(
             io.StringIO(data_section),
-            delim_whitespace=True,
+            sep=r'\s+', 
             on_bad_lines="skip"
         )
 
